@@ -98,6 +98,7 @@ def main():
   client = mqtt.Client()
   client.on_connect = on_connect
   client.on_message = on_message
+  client.username_pw_set(username=admin, password=password)
 
   client.connect("MQTT BROKER IP ADDRESS", 1883, 60)
 
